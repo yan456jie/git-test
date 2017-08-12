@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.yj.git-test</groupId>
+    <artifactId>git-test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <thrift.version>0.9.2</thrift.version>
+        <slf4j.version>1.7.5</slf4j.version>
+        <fastjson.version>1.2.4</fastjson.version>
+        <log4j.version>1.2.17</log4j.version>
+        <guava.version>19.0</guava.version>
+        <commons-collection.version>3.2.1</commons-collection.version>
+        <solr.version>6.3.0</solr.version>
+        <stax2-api.version>3.1.4</stax2-api.version>
+        <woodstox-core-asl.version>4.4.1</woodstox-core-asl.version>
+        <commons-pool2.version>2.2</commons-pool2.version>
+        <commons-io.version>2.5</commons-io.version>
+        <spring.version>3.2.16.RELEASE</spring.version>
+        <curator.version>2.11.0</curator.version>
+        <httprequest.version>6.0</httprequest.version>
+        <httpcomponents.version>4.4.1</httpcomponents.version>
+        <fastjson.version>1.2.13</fastjson.version>
+        <junit.version>4.11</junit.version>
+        <commons-lang.version>2.6</commons-lang.version>
+        <mysql.version>5.1.34</mysql.version>
+        <redis.version>2.4.2</redis.version>
+        <druid.version>1.0.25</druid.version>
+        <mockito.version>1.10.8</mockito.version>
+        <powermock.version>1.6.1</powermock.version>
+        <ibatis.version>2.3.4.726</ibatis.version>
+        <metrics.version>3.1.2</metrics.version>
+        <netty.version>4.1.5.Final</netty.version>
+        <influxdb.client.version>3.0.2-SNAPSHOT</influxdb.client.version>
+        <xdcs.client.version>0.0.9-SNAPSHOT</xdcs.client.version>
+        <spring.version>4.2.6.RELEASE</spring.version>
+        <mainstay.version>3.0.0-M2</mainstay.version>
+        <!--<mainstay.version>3.0.5</mainstay.version>-->
+    </properties>
+
+    <!--servlet包-->
+    <dependency>
+        <groupId>org.apache.geronimo.specs</groupId>
+        <artifactId>geronimo-servlet_2.4_spec</artifactId>
+        <version>1.1.1</version>
+        <scope>provided</scope>
+    </dependency>
+    <!--单元测试-->
+    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+    </dependency>
+    <!-- 3.日志：导入这两个，maven会自动找log4j -->
+    <!-- simple logger for java，抽象日志接口 -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-api</artifactId>
+        <version>1.7.21</version>
+    </dependency>
+    <!-- 连接log4j和slfj -->
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-log4j12</artifactId>
+        <version>1.7.21</version>
+    </dependency>
+    <!-- 4.Spring -->
+    <!-- 1)Spring核心 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-beans</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- 2)Spring DAO层 -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-jdbc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-tx</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- 3)Spring web -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-webmvc</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+    <!-- 4)Spring test -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-test</artifactId>
+        <version>${spring.version}</version>
+    </dependency>
+
+    <!--json格式化工具-->
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>${fastjson.version}</version>
+    </dependency>
+    <!--apache基础工具包,字符串、时间等-->
+    <dependency>
+        <groupId>commons-lang</groupId>
+        <artifactId>commons-lang</artifactId>
+        <version>${commons-lang.version}</version>
+    </dependency>
+    <!--apache基础工具包,输入输出-->
+    <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+    </dependency>
+    <!--apache基础工具包,集合-->
+    <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>${commons-collection.version}</version>
+    </dependency>
+    <!-- google工具包，集合等基础操作 -->
+    <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+    </dependency>
+
+    <!--======================================================-->
+    <!--编译环境，jetty插件-->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.4.5.v20170502</version>
+                <configuration>
+                    <scanIntervalSeconds>10</scanIntervalSeconds>
+                    <webApp>
+                        <contextPath>/search-platform-public-server</contextPath>
+                    </webApp>
+                    <webAppSourceDirectory>${project.basedir}/WebContent</webAppSourceDirectory>
+                    <classesDirectory>${project.basedir}/target/classes</classesDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+
+        <finalName>xxx</finalName>
+    </build>
+
+
+</project>
